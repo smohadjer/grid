@@ -1,3 +1,11 @@
+/**
+* @author Saeid Mohadjer <info@saeidmohadjer.com>
+* @link https://github.com/smohadjer/grid
+* @license http://opensource.org/licenses/MIT
+*
+* @version 0.0.1
+*/
+
 .grid {
 	/* hack for space among inline-block elements */
 	/* font-size: 0; */
