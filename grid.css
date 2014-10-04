@@ -7,6 +7,7 @@
 	display: inline-block;
 	width: 100%;
 	box-sizing: border-box;
+	vertical-align: top;
 }
 
 /* 2 column grid */
