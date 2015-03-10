@@ -1,0 +1,23 @@
+{
+  "name": "grid",
+  "version": "0.0.1",
+  "homepage": "https://github.com/smohadjer/grid",
+  "authors": [
+    "Saeid Mohadjer <saeid@fastmail.fm>"
+  ],
+  "description": "minimal responsive css grid",
+  "main": "grid.css",
+  "keywords": [
+    "responsive",
+    "grid",
+    "css"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
