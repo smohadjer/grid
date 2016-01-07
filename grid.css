@@ -11,8 +11,19 @@
 	/* font-size: 0; */
 }
 
+/* clearfix */
+.grid:before,
+.grid:after {
+  content: " ";
+	display: table;
+}
+
+.grid:after {
+	clear: both;
+}
+
 .grid .cell {
-	display: inline-block;
+	float: left;
 	width: 100%;
 	box-sizing: border-box;
 	vertical-align: top;
@@ -114,6 +125,16 @@
 }
 
 @media only screen and (min-width: 1280px) {
+	/* 3 columns */
+	.g1280_3 .cell,
+	.g1280_3 .cell:nth-of-type(n) {
+		width: 31.333333%;
+		margin-left: 3%;
+	}
+	.g1280_3 .cell:nth-of-type(3n+1) {
+		margin-left: 0;
+	}
+
 	/* 4 columns */
 	.g1280_4 .cell,
 	.g1280_4 .cell:nth-of-type(n) {
