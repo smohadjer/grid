@@ -1,0 +1,177 @@
+/**
+* @author Saeid Mohadjer <info@saeidmohadjer.com>
+* @link https://github.com/smohadjer/grid
+* @license http://opensource.org/licenses/MIT
+*
+* @version 0.0.3
+*/
+
+.grid {
+	/* clearfix */
+	&:before,
+	&:after {
+	  content: " ";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+
+	.cell {
+		float: left;
+		width: 100%;
+		box-sizing: border-box;
+		vertical-align: top;
+	}
+
+	/* 2 column grid */
+	&.g320_2 .cell {
+		width: 48.5%;
+		margin-left: 3%;
+	}
+	&.g320_2 .cell:nth-of-type(2n+1) {
+		margin-left: 0;
+	}
+
+	@media (min-width: 480px) {
+		/* 2 columns */
+		&.g480_2 .cell,
+		&.g480_2 .cell:nth-of-type(n) {
+			width: 48.5%;
+			margin-left: 3%;
+		}
+
+		&.g480_2 .cell:nth-of-type(2n+1) {
+			margin-left: 0;
+		}
+
+		/* 3 columns */
+		&.g480_3 .cell,
+		&.g480_3 .cell:nth-of-type(n) {
+			width: 31.333333%;
+			margin-left: 3%;
+		}
+
+		&.g480_3 .cell:nth-of-type(3n+1) {
+			margin-left: 0;
+		}
+	}
+
+
+	@media only screen and (min-width: 768px) {
+		/* 2 columns */
+		&.g768_2 .cell,
+		&.g768_2 .cell:nth-of-type(n) {
+			width: 48.5%;
+			margin-left: 3%;
+		}
+
+		&.g768_2 .cell:nth-of-type(2n+1) {
+			margin-left: 0;
+		}
+
+		/* 3 columns */
+		&.g768_3 .cell,
+		&.g768_3 .cell:nth-of-type(n) {
+			width: 31.333333%;
+			margin-left: 3%;
+		}
+
+		&.g768_3 .cell:nth-of-type(3n+1) {
+			margin-left: 0;
+		}
+
+		/* 4 columns */
+		&.g768_4 .cell,
+		&.g768_4 .cell:nth-of-type(n) {
+			width: 22.75%;
+			margin-left: 3%;
+		}
+
+		&.g768_4 .cell:nth-of-type(4n+1) {
+			margin-left: 0;
+		}
+	}
+
+	@media only screen and (min-width: 1024px) {
+		/* 3 columns */
+		&.g1024_3 .cell,
+		&.g1024_3 .cell:nth-of-type(n) {
+			width: 31.333333%;
+			margin-left: 3%;
+		}
+
+		&.g1024_3 .cell:nth-of-type(3n+1) {
+			margin-left: 0;
+		}
+
+		/* 4 columns */
+		&.g1024_4 .cell,
+		&.g1024_4 .cell:nth-of-type(n) {
+			width: 22.75%;
+			margin-left: 3%;
+		}
+
+		&.g1024_4 .cell:nth-of-type(4n+1) {
+			margin-left: 0;
+		}
+
+		/* 5 columns */
+		&.g1024_5 .cell,
+		&.g1024_5 .cell:nth-of-type(n) {
+			width: 17.6%;
+			margin-left: 3%;
+		}
+
+		&.g1024_5 .cell:nth-of-type(5n+1) {
+			margin-left: 0;
+		}
+	}
+
+	@media only screen and (min-width: 1280px) {
+		/* 3 columns */
+		&.g1280_3 .cell,
+		&.g1280_3 .cell:nth-of-type(n) {
+			width: 31.333333%;
+			margin-left: 3%;
+		}
+
+		&.g1280_3 .cell:nth-of-type(3n+1) {
+			margin-left: 0;
+		}
+
+		/* 4 columns */
+		&.g1280_4 .cell,
+		&.g1280_4 .cell:nth-of-type(n) {
+			width: 22.75%;
+			margin-left: 3%;
+		}
+
+		&.g1280_4 .cell:nth-of-type(4n+1) {
+			margin-left: 0;
+		}
+
+		/* 5 columns */
+		&.g1280_5 .cell,
+		&.g1280_5 .cell:nth-of-type(n) {
+			width: 17.6%;
+			margin-left: 3%;
+		}
+
+		&.g1280_5 .cell:nth-of-type(5n+1) {
+			margin-left: 0;
+		}
+
+		/* 6 columns */
+		&.g1280_6 .cell,
+		&.g1280_6 .cell:nth-of-type(n) {
+			width: 14.16666666666667%;
+			margin-left: 3%;
+		}
+
+		&.g1280_6 .cell:nth-of-type(6n+1) {
+			margin-left: 0;
+		}
+	}
+}
