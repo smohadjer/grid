@@ -1,0 +1,10 @@
+#!/bin/bash
+branch=master
+git checkout gh-pages -q
+git rm -r * -q
+git checkout $branch dist/* -q
+git checkout $branch demo/* -q
+git add --all
+git commit -m "Updated via post-commit hook"
+git push -q
+git checkout $branch
