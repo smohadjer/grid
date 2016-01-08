@@ -12,7 +12,7 @@
 				margin: 3%;
 			}
 
-			.cell {
+			.grid__cell {
 				background: #ccc;
 				padding: 20px 0;
 				margin: 5px 0;
@@ -23,6 +23,10 @@
 				border-bottom: solid 1px #666;
 				padding-bottom: 20px;
 			}
+
+			section:last-child {
+				border: none;
+			}
 		</style>
     </head>
     <body>
@@ -31,41 +35,41 @@
 			<p>Supported breakpoints are: 320, 480, 768, 1024, and 1280. Maximum number of columns is six.</p>
 			<section class="grid g768_2 g1280_3">
 				<h1>2 columns from 768 to 1280, 3 columns above 1280</h1>
-				<div class="cell">Lorem ipsum...</div>
-				<div class="cell">Lorem ipsum...</div>
-				<div class="cell">Lorem ipsum...</div>
-				<div class="cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
 			</section>
 			<section class="grid g480_1 g768_2 g1024_3 g1280_4">
 				<h1>2 columns above 768, 3 columns above 1024, 4 columns above 1280</h1>
-				<div class="cell">Lorem ipsum...</div>
-				<div class="cell">Lorem ipsum...</div>
-				<div class="cell">Lorem ipsum...</div>
-				<div class="cell">Lorem ipsum...</div>
-				<div class="cell">Lorem ipsum...</div>
-				<div class="cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
 			</section>
 			<section class="grid g480_2 g768_3 g1024_4 g1280_5">
 				<h1>2 columns above 480, 3 columns above 768, 4 columns above 1024, 5 columns above 1280</h1>
-				<div class="cell">Lorem ipsum...</div>
-				<div class="cell">Lorem ipsum...</div>
-				<div class="cell">Lorem ipsum...</div>
-				<div class="cell">Lorem ipsum...</div>
-				<div class="cell">Lorem ipsum...</div>
-				<div class="cell">Lorem ipsum...</div>
-				<div class="cell">Lorem ipsum...</div>
-				<div class="cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
 			</section>
 			<section class="grid g320_2 g480_3 g768_4 g1024_5 g1280_6">
 				<h1>2 columns above 320, 3 columns above 480, 4 columns above 768, 5 columns above 1024, 6 columns above 1280</h1>
-				<div class="cell">Lorem ipsum...</div>
-				<div class="cell">Lorem ipsum...</div>
-				<div class="cell">Lorem ipsum...</div>
-				<div class="cell">Lorem ipsum...</div>
-				<div class="cell">Lorem ipsum...</div>
-				<div class="cell">Lorem ipsum...</div>
-				<div class="cell">Lorem ipsum...</div>
-				<div class="cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
+				<div class="grid__cell">Lorem ipsum...</div>
 			</section>
 		</article>
     </body>
