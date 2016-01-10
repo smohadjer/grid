@@ -7,7 +7,7 @@ Load grid.css or grid.min.css from dist folder in your HTML. Then update your HT
 ## Supported breakpoints and columns count
 Supported breakpoints: 320, 480, 600, 768, 1024, 1280
 
-Supposted layout: 2 to 6 columns
+Supported layout: 2 to 6 columns
 
 ##Demo
 Resize browser window to see how demo grid works, view source to see how markup is setup:
