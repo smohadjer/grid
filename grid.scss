@@ -89,58 +89,46 @@ $xlarge: 1280;
 		clear: both;
 	}
 
-	.grid__cell {
+	&__cell {
 		float: left;
 		width: 100%;
 		box-sizing: border-box;
 	}
-}
 
-@media (min-width: $xxsmall + 'px') {
-	.grid {
+	@media (min-width: $xxsmall + 'px') {
 		@include twoColumn($xxsmall);
 		@include threeColumn($xxsmall);
 	}
-}
 
-@media (min-width: $xsmall + 'px') {
-	.grid {
+	@media (min-width: $xsmall + 'px') {
 		@include twoColumn($xsmall);
 		@include threeColumn($xsmall);
 		@include fourColumn($xsmall);
 	}
-}
 
-@media (min-width: $small + 'px') {
-	.grid {
+	@media (min-width: $small + 'px') {
 		@include twoColumn($small);
 		@include threeColumn($small);
 		@include fourColumn($small);
 	}
-}
 
-@media (min-width: $medium + 'px') {
-	.grid {
+	@media (min-width: $medium + 'px') {
 		@include twoColumn($medium);
 		@include threeColumn($medium);
 		@include fourColumn($medium);
 		@include fiveColumn($medium);
 		@include sixColumn($medium);
 	}
-}
 
-@media (min-width: $large + 'px') {
-	.grid {
+	@media (min-width: $large + 'px') {
 		@include twoColumn($large);
 		@include threeColumn($large);
 		@include fourColumn($large);
 		@include fiveColumn($large);
 		@include sixColumn($large);
 	}
-}
 
-@media (min-width: $xlarge + 'px') {
-	.grid {
+	@media (min-width: $xlarge + 'px') {
 		@include twoColumn($xlarge);
 		@include threeColumn($xlarge);
 		@include fourColumn($xlarge);
