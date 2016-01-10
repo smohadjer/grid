@@ -6,4 +6,5 @@ Load grid.css (in dist folder) or use bower to install it. Then update your mark
 
 ##Demo
 Resize browser window to see how demo grid works, view source to see how markup is setup:
+
 http://smohadjer.github.io/grid/demo/demo.html
