@@ -1,4 +1,4 @@
-A responsive grid
+Responsive CSS grid
 ====
 
 ## Usage
