@@ -3,76 +3,18 @@
 * @link https://github.com/smohadjer/grid
 * @license http://opensource.org/licenses/MIT
 *
-* @version 0.0.4
+* @version 0.0.5
 */
 
-.grid {
-	/* clearfix */
-	&:before,
-	&:after {
-	  content: " ";
-		display: table;
-	}
+$xxsmall: 320;
+$xsmall: 480;
+$small: 600;
+$medium: 768;
+$large: 1024;
+$xlarge: 1280;
 
-	&:after {
-		clear: both;
-	}
-
-	.grid__cell {
-		float: left;
-		width: 100%;
-		box-sizing: border-box;
-		vertical-align: top;
-	}
-}
-
-/* 2 column grid */
-@media (min-width: 320px) {
-	.grid {
-		&--320_2 {
-			.grid__cell {
-				width: 48.5%;
-				margin-left: 3%;
-
-				&:nth-of-type(2n+1) {
-					margin-left: 0;
-				}
-			}
-		}
-	}
-}
-
-@media (min-width: 480px) {
-	.grid {
-		// 2 columns
-		&--480_2 .grid__cell {
-			&, &:nth-of-type(n) {
-				width: 48.5%;
-				margin-left: 3%;
-			}
-
-			&:nth-of-type(2n+1) {
-				margin-left: 0;
-			}
-		}
-
-		/* 3 columns */
-		&--480_3 .grid__cell {
-			&, &:nth-of-type(n) {
-				width: 31.333333%;
-				margin-left: 3%;
-			}
-
-			&:nth-of-type(3n+1) {
-				margin-left: 0;
-			}
-		}
-	}
-}
-
-@media (min-width: 768px) {
-	/* 2 columns */
-	.grid--768_2 .grid__cell {
+@mixin twoColumn($breakpoint) {
+	&--#{$breakpoint}_2 .grid__cell {
 		&, &:nth-of-type(n) {
 			width: 48.5%;
 			margin-left: 3%;
@@ -82,9 +24,10 @@
 			margin-left: 0;
 		}
 	}
+}
 
-	/* 3 columns */
-	.grid--768_3 .grid__cell {
+@mixin threeColumn($breakpoint) {
+	&--#{$breakpoint}_3 .grid__cell {
 		&, &:nth-of-type(n) {
 			width: 31.333333%;
 			margin-left: 3%;
@@ -94,9 +37,10 @@
 			margin-left: 0;
 		}
 	}
+}
 
-	/* 4 columns */
-	.grid--768_4 .grid__cell {
+@mixin fourColumn($breakpoint) {
+	&--#{$breakpoint}_4 .grid__cell {
 		&, &:nth-of-type(n) {
 			width: 22.75%;
 			margin-left: 3%;
@@ -108,94 +52,99 @@
 	}
 }
 
-@media only screen and (min-width: 1024px) {
-	/* 3 columns */
-	.grid {
-		&--1024_3 .grid__cell {
-			&, &:nth-of-type(n) {
-				width: 31.333333%;
-				margin-left: 3%;
-			}
-
-			&:nth-of-type(3n+1) {
-				margin-left: 0;
-			}
+@mixin fiveColumn($breakpoint) {
+	&--#{$breakpoint}_5 .grid__cell {
+		&, &:nth-of-type(n) {
+			width: 17.6%;
+			margin-left: 3%;
 		}
 
-		/* 4 columns */
-		&--1024_4 .grid__cell {
-			&, &:nth-of-type(n) {
-				width: 22.75%;
-				margin-left: 3%;
-			}
-
-			&:nth-of-type(4n+1) {
-				margin-left: 0;
-			}
-		}
-
-		/* 5 columns */
-		&--1024_5 .grid__cell {
-			&, &:nth-of-type(n) {
-				width: 17.6%;
-				margin-left: 3%;
-			}
-
-			&:nth-of-type(5n+1) {
-				margin-left: 0;
-			}
+		&:nth-of-type(5n+1) {
+			margin-left: 0;
 		}
 	}
 }
 
-@media only screen and (min-width: 1280px) {
+@mixin sixColumn($breakpoint) {
+	&--#{$breakpoint}_6 .grid__cell {
+		&, &:nth-of-type(n) {
+			width: 14.16666666666667%;
+			margin-left: 3%;
+		}
+
+		&:nth-of-type(6n+1) {
+			margin-left: 0;
+		}
+	}
+}
+
+.grid {
+	/* clearfix */
+	&:before,
+	&:after {
+	  content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+
+	.grid__cell {
+		float: left;
+		width: 100%;
+		box-sizing: border-box;
+	}
+}
+
+@media (min-width: $xxsmall + 'px') {
 	.grid {
-		/* 3 columns */
-		&--1280_3 .grid__cell {
-			&, &:nth-of-type(n) {
-				width: 31.333333%;
-				margin-left: 3%;
-			}
+		@include twoColumn($xxsmall);
+		@include threeColumn($xxsmall);
+	}
+}
 
-			&:nth-of-type(3n+1) {
-				margin-left: 0;
-			}
-		}
+@media (min-width: $xsmall + 'px') {
+	.grid {
+		@include twoColumn($xsmall);
+		@include threeColumn($xsmall);
+		@include fourColumn($xsmall);
+	}
+}
 
-		/* 4 columns */
-		&--1280_4 .grid__cell {
-			&, &:nth-of-type(n) {
-				width: 22.75%;
-				margin-left: 3%;
-			}
+@media (min-width: $small + 'px') {
+	.grid {
+		@include twoColumn($small);
+		@include threeColumn($small);
+		@include fourColumn($small);
+	}
+}
 
-			&:nth-of-type(4n+1) {
-				margin-left: 0;
-			}
-		}
+@media (min-width: $medium + 'px') {
+	.grid {
+		@include twoColumn($medium);
+		@include threeColumn($medium);
+		@include fourColumn($medium);
+		@include fiveColumn($medium);
+		@include sixColumn($medium);
+	}
+}
 
-		/* 5 columns */
-		&--1280_5 .grid__cell {
-			&, &:nth-of-type(n) {
-				width: 17.6%;
-				margin-left: 3%;
-			}
+@media (min-width: $large + 'px') {
+	.grid {
+		@include twoColumn($large);
+		@include threeColumn($large);
+		@include fourColumn($large);
+		@include fiveColumn($large);
+		@include sixColumn($large);
+	}
+}
 
-			&:nth-of-type(5n+1) {
-				margin-left: 0;
-			}
-		}
-
-		/* 6 columns */
-		&--1280_6 .grid__cell {
-			&, &:nth-of-type(n) {
-				width: 14.16666666666667%;
-				margin-left: 3%;
-			}
-
-			&:nth-of-type(6n+1) {
-				margin-left: 0;
-			}
-		}
+@media (min-width: $xlarge + 'px') {
+	.grid {
+		@include twoColumn($xlarge);
+		@include threeColumn($xlarge);
+		@include fourColumn($xlarge);
+		@include fiveColumn($xlarge);
+		@include sixColumn($xlarge);
 	}
 }
