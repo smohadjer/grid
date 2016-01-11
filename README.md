@@ -1,6 +1,9 @@
 Responsive CSS grid
 ====
 
+##Demo
+http://smohadjer.github.io/grid/demo/demo.html (Resize browser to see how grid works)
+
 ## Usage
 1. Load "grid.css" or "grid.min.css" from dist folder in your HTML or use following link for testing: 
 
@@ -27,8 +30,3 @@ Responsive CSS grid
 Supported breakpoints: 320, 480, 600, 768, 1024, 1280
 
 Supported layout: 2 to 6 columns
-
-##Demo
-Resize browser window to see how demo grid works, view source to see how markup is setup:
-
-http://smohadjer.github.io/grid/demo/demo.html
