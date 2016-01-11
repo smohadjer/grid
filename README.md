@@ -2,7 +2,7 @@ Responsive CSS grid
 ====
 
 ## Usage
-Load "grid.css" or "grid.min.css" from dist folder in your HTML or past below CDN link: 
+Load "grid.css" or "grid.min.css" from dist folder in your HTML or use following link for testing: 
 
 ```html
 <link href="https://rawgit.com/smohadjer/grid/master/dist/grid.min.css" />
