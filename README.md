@@ -2,7 +2,9 @@ Responsive CSS grid
 ====
 
 ##Demo
-http://smohadjer.github.io/grid/demo/demo.html (Resize browser to see how grid works)
+http://smohadjer.github.io/grid/demo/demo.html 
+
+Resize browser window to see how grid works.
 
 ## Usage
 1. Load "grid.css" or "grid.min.css" from dist folder in your HTML or use following link for testing: 
